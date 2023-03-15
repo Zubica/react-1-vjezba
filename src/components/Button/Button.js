@@ -6,6 +6,8 @@ const Button = ({
   isLanding = false,
   isSecondary = false,
   isOutLine = false,
+  className,
+  handleClick,
   children,
 }) => {
   let modifierClass = "";
@@ -24,15 +26,22 @@ const Button = ({
       modifierClass = "";
       break;
   }
-  return <button className={`Button ${modifierClass} ${className}`}>
-  {children}
-  </button>
-}
+  return (
+    <button
+      className={`Button ${modifierClass} ${className}`}
+      onClick={handleClick}
+    >
+      {children}
+    </button>
+  );
+};
 
 Button.propTypes = {
+  className: PropTypes.string,
   isLanding: PropTypes.bool,
   isSecondary: PropTypes.bool,
   isOutLine: PropTypes.bool,
+  handleClick: PropTypes.func,
   children: PropTypes.node,
 };
 

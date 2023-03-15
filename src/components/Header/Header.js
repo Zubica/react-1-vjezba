@@ -41,12 +41,6 @@ const Header = () => {
           <Button className="Header-Button" isSecondary={true}>
             Register
           </Button>
-          <a href="#" className="button Header-Button">
-            Sign in
-          </a>
-          <a href="#" className="button button_secondary Header-Button">
-            Register
-          </a>
         </nav>
       </div>
     </header>

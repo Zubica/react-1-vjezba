@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button/Button";
 import "./Landing.scss";
 
 import LandingImg from "../../assets/images/landing.jpg";
@@ -11,7 +12,7 @@ const Landing = () => {
       </figure>
       <div className="Landing-Overlay Landing-Overlay_left"></div>
       <div className="Landing-Overlay Landing-Overlay_right"></div>
-      <div className="landing-Content">
+      <div className="Landing-Content">
         <div className="Landing-ContentInner">
           <h1 className="Landing-Title">
             Learn what matters, Algebra Academy powered by Vaucher
@@ -20,9 +21,7 @@ const Landing = () => {
             Make a turnaround in your career or upgrade your current skill set
             with knowledge-based lessons from IT practice.
           </p>
-          <a href="courses.html" className="button button_landing">
-            Explore courses
-          </a>
+          <Button isLanding>Explore courses</Button>
         </div>
       </div>
     </section>
