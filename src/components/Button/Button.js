@@ -24,10 +24,10 @@ const Button = ({
       modifierClass = "";
       break;
   }
-  return <button className={`Button ${modifierClass} ${className}`>
+  return <button className={`Button ${modifierClass} ${className}`}>
   {children}
-  </button>;
-};
+  </button>
+}
 
 Button.propTypes = {
   isLanding: PropTypes.bool,
