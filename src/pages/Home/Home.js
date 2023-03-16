@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import { courses } from "../../utils/data";
 import Grid from "../../components/Grid/Grid";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -30,7 +31,21 @@ const Home = () => {
             ))}
           </Grid>
         </Section>
-        <Section isSecondary={true}>Jadan sam</Section>
+        <Section
+        content={"At the academy, I
+          learned how to apply technology in practice. Frontend education
+          was demanding, it required a lot of time. Upon completion, I got
+          my first job as a developer."}
+          
+        
+        isSecondary={true}>
+        figure,
+        img,
+        content,
+          imgSrc={testimonial.img.src}
+          imgAlt={testimonial.img.alt}
+          =
+        </Section>
       </main>
     </>
   );
