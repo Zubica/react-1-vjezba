@@ -32,21 +32,11 @@ const Home = () => {
           </Grid>
         </Section>
         <Section
-        content={"At the academy, I
-          learned how to apply technology in practice. Frontend education
-          was demanding, it required a lot of time. Upon completion, I got
-          my first job as a developer."}
-          
-        
-        isSecondary={true}>
-        figure,
-        img,
-        content,
-          imgSrc={testimonial.img.src}
-          imgAlt={testimonial.img.alt}
-          =
-        </Section>
-      </main>
+        isSecondary = {true}>At the academy, I
+        learned how to apply technology in practice. Frontend education
+        was demanding, it required a lot of time. Upon completion, I got
+        my first job as a developer.</Section>
+        </main> 
     </>
   );
 };
