@@ -7,8 +7,12 @@ import CourseCard from "../../components/CourseCard/CourseCard";
 import { courses } from "../../utils/data";
 import Grid from "../../components/Grid/Grid";
 import Testimonial from "../../components/Testimonial/Testimonial";
+import TestimonialImg from "../../assets/images/testimonial.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Header />
@@ -16,7 +20,11 @@ const Home = () => {
         <Landing />
         <Section
           title={"Open your new possibilities"}
-          button={<Button>More courses</Button>}
+          button={
+            <Button isOutLine handleClick={() => navigate("/courses")}>
+              More courses
+            </Button>
+          }
           helperText={"Learn something new"}
         >
           <Grid>
@@ -33,7 +41,11 @@ const Home = () => {
         </Section>
 
         <Section isSecondary={true}>
-          <Testimonial />
+          <Testimonial imgSrc={TestimonialImg} imgAlt="Testimonial žena">
+            At the academy, I learned how to apply technology in practice.
+            Frontend education was demanding, it required a lot of time. Upon
+            completion, I got my first job as a developer.
+          </Testimonial>
         </Section>
       </main>
     </>

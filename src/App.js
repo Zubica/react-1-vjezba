@@ -1,11 +1,17 @@
 import "./App.scss";
-import Button from "./components/Button/Button";
+import Courses from "./pages/Courses/Courses";
 import Home from "./pages/Home/Home";
+import Course from "./pages/Course/Course";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/course" element={<Course />} />
+      </Routes>
     </>
   );
 }

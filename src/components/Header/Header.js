@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "../Button/Button";
 import "./Header.scss";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ isSecondary = false }) => {
   return (
-    <header className="Header">
+    <header className={`Header ${isSecondary ? "Header_secondary" : ""}`}>
       <div className="Header-Inner">
-        <a href="index.html" className="Header-LogoLink">
+        <Link to={"/"}>
           <svg
             width="120"
             height="24"
@@ -19,7 +21,7 @@ const Header = () => {
               fill="white"
             />
           </svg>
-        </a>
+        </Link>
         <svg
           className="Header-Hamburger"
           width="448"
@@ -34,9 +36,9 @@ const Header = () => {
           />
         </svg>
         <nav className="Header-Nav">
-          <a href="courses.html" className="Header-Link">
+          <Link to={"/courses"} className="Header-Link">
             Courses
-          </a>
+          </Link>
           <Button className="Header-Button">Sign in</Button>
           <Button className="Header-Button" isSecondary={true}>
             Register
@@ -45,5 +47,8 @@ const Header = () => {
       </div>
     </header>
   );
+};
+Header.propTypes = {
+  isSecondary: PropTypes.bool,
 };
 export default Header;
