@@ -30,7 +30,6 @@ const Home = () => {
             ))}
           </Grid>
         </Section>
-        <Section isSecondary={true}>Jadan sam</Section>
       </main>
     </>
   );
