@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import { courses } from "../../utils/data";
 import Grid from "../../components/Grid/Grid";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -29,6 +30,10 @@ const Home = () => {
               />
             ))}
           </Grid>
+        </Section>
+
+        <Section isSecondary={true}>
+          <Testimonial />
         </Section>
       </main>
     </>
