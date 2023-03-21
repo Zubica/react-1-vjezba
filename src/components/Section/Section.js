@@ -5,7 +5,7 @@ import "./Section.scss";
 const Section = ({
   helperText,
   title,
-  button,
+  actionContainer,
   children,
   isSecondary = false,
 }) => {
@@ -15,10 +15,10 @@ const Section = ({
     <section className={`Section ${isSecondary ? "Section_secondary" : ""}`}>
       <div className="Section-Inner">
         {helperText && <p className="Section-HelperText">{helperText}</p>}
-        {(title || button) && (
+        {(title || actionContainer) && (
           <div className="Section-Header">
             {title && <h2 className="Section-Title">{title}</h2>}
-            {button}
+            {actionContainer}
           </div>
         )}
         {children}
@@ -30,7 +30,7 @@ const Section = ({
 Section.propTypes = {
   helperText: PropTypes.string,
   title: PropTypes.string,
-  button: PropTypes.node,
+  actionContainer: PropTypes.node,
   isSecondary: PropTypes.bool,
   children: PropTypes.node,
 };

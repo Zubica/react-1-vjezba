@@ -21,7 +21,7 @@ const Testimonial = ({ imgSrc, imgAlt, children }) => {
       <p className="Testimonial-Content">
         <span className="Testimonial-Quotation">"</span>
         {children}
-        <span className="Testimonial-Q uotation">"</span>
+        <span className="Testimonial-Quotation">"</span>
       </p>
     </div>
   );

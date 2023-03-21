@@ -20,12 +20,12 @@ const Home = () => {
         <Landing />
         <Section
           title={"Open your new possibilities"}
-          button={
+          actionContainer={
             <Button isOutLine handleClick={() => navigate("/courses")}>
               More courses
             </Button>
           }
-          helperText={"Learn something new"}
+          helperText="Learn something new"
         >
           <Grid>
             {courses.map((course) => (
@@ -35,6 +35,7 @@ const Home = () => {
                 imgAlt={course.img.alt}
                 title={course.title}
                 subtitle={course.subtitle}
+                url={course.id}
               />
             ))}
           </Grid>

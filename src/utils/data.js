@@ -16,6 +16,7 @@ export const courses = [
       src: Image1,
       alt: "Introduction",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ export const courses = [
       src: Image2,
       alt: "HTML & CSS",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const courses = [
       src: Image3,
       alt: "Version Control Systems",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ export const courses = [
       src: Image4,
       alt: "Advanced CSS",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
   {
     id: 5,
@@ -52,6 +56,7 @@ export const courses = [
       src: Image5,
       alt: "react",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
   {
     id: 6,
@@ -61,6 +66,7 @@ export const courses = [
       src: Image6,
       alt: "Advanced CSS",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
   {
     id: 7,
@@ -70,6 +76,7 @@ export const courses = [
       src: Image7,
       alt: "Advanced CSS",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
   {
     id: 8,
@@ -79,6 +86,7 @@ export const courses = [
       src: Image8,
       alt: "Advanced CSS",
     },
+    content: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut nulla natus nobis deleniti, repudiandae animi omnis illo sunt esse neque quas exercitationem nihil assumenda delectus facilis! Distinctio voluptates id quos.`,
   },
 ];
 
