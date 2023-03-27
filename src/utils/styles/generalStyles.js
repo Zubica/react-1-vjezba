@@ -1,5 +1,5 @@
-import styled from "style-components";
-import { colors } from "./theme";
+import styled from "styled-components";
+import { breakpoints, colors } from "./theme";
 
 export const Button = styled.Button`
   display: inline-block;
@@ -39,4 +39,16 @@ export const Button = styled.Button`
     width: 200px;
     border: 1px solid var(--color-primary);
     `}
+`;
+
+export const SearchBar = styled.input`
+  padding: 0 15px;
+  line-height: 40px;
+  border: 1px solid ${colors.textSecondary};
+  border-radius: 6px;
+  font-size: 14px;
+
+  @media screen and (${breakpoints.tablet}) {
+    font-size: 16px;
+  }
 `;

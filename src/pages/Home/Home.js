@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Section from "../../components/Section/Section";
 import Header from "../../components/Header/Header";
 import Landing from "../../components/Landing/Landing";
 import Button from "../../components/Button/Button";
 import CourseCard from "../../components/CourseCard/CourseCard";
-import { courses } from "../../utils/data";
+import { courses as data } from "../../utils/data";
 import Grid from "../../components/Grid/Grid";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import TestimonialImg from "../../assets/images/testimonial.jpg";
 import { useNavigate } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [courses, setCourses] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCourses(data.slice(0, 4));
+    }, 3000);
+  }, []);
 
   return (
     <>
@@ -27,20 +35,23 @@ const Home = () => {
           }
           helperText="Learn something new"
         >
-          <Grid>
-            {courses.map((course) => (
-              <CourseCard
-                key={course.id}
-                imgSrc={course.img.src}
-                imgAlt={course.img.alt}
-                title={course.title}
-                subtitle={course.subtitle}
-                url={course.id}
-              />
-            ))}
-          </Grid>
+          {courses ? (
+            <Grid>
+              {courses.map((course) => (
+                <CourseCard
+                  key={course.id}
+                  imgSrc={course.img.src}
+                  imgAlt={course.img.alt}
+                  title={course.title}
+                  subtitle={course.subtitle}
+                  url={course.id}
+                />
+              ))}
+            </Grid>
+          ) : (
+            <Loader />
+          )}
         </Section>
-
         <Section isSecondary={true}>
           <Testimonial imgSrc={TestimonialImg} imgAlt="Testimonial žena">
             At the academy, I learned how to apply technology in practice.
