@@ -1,7 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
 import "./Landing.scss";
-
+import { Button } from "../../utils/styles/generalStyles";
 import LandingImg from "../../assets/images/landing.jpg";
 
 const Landing = () => {
