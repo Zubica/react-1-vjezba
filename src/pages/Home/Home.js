@@ -3,7 +3,10 @@ import Section from "../../components/Section/Section";
 import Header from "../../components/Header/Header";
 import Landing from "../../components/Landing/Landing";
 // import Button from "../../components/Button/Button";
+<<<<<<< HEAD
 import { Button } from "../../utils/styles/generalStyles";
+=======
+>>>>>>> 500beb51ea8752195dcaa1123add13ba79c106fe
 import CourseCard from "../../components/CourseCard/CourseCard";
 import { courses as data } from "../../utils/data";
 import Grid from "../../components/Grid/Grid";
@@ -29,11 +32,11 @@ const Home = () => {
         <Landing />
         <Section
           title={"Open your new possibilities"}
-          actionContainer={
-            <Button isOutLine handleClick={() => navigate("/courses")}>
-              More courses
-            </Button>
-          }
+          // actionContainer={
+          //   <Button isOutLine handleClick={() => navigate("/courses")}>
+          //     More courses
+          //   </Button>
+          // }
           helperText="Learn something new"
         >
           {courses ? (

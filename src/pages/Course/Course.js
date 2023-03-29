@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Button } from "../../utils/styles/generalStyles";
+=======
+// import Button from "../../components/Button/Button";
+>>>>>>> 500beb51ea8752195dcaa1123add13ba79c106fe
 import Section from "../../components/Section/Section";
 import Header from "../../components/Header/Header";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
@@ -19,11 +23,11 @@ const Course = () => {
       <main>
         <Section
           title={course.title}
-          actionContainer={
-            <Button isOutLine handleClick={() => navigate(-1)}>
-              Back
-            </Button>
-          }
+          // actionContainer={
+          //   <Button isOutLine handleClick={() => navigate(-1)}>
+          //     Back
+          //   </Button>
+          // }
           helperText={course.subtitle}
         >
           <SingleCourse imgSrc={course.img.src} imgAlt={course.img.alt}>
