@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   HeaderWrapper,
   HeaderInner,
@@ -11,6 +11,7 @@ import {
 } from "./HeaderStyles";
 
 const Header = ({ isSecondary = false }) => {
+  const navigate = useNavigate();
   return (
     <HeaderWrapper isSecondary={isSecondary}>
       <HeaderInner>
@@ -32,7 +33,9 @@ const Header = ({ isSecondary = false }) => {
         <Nav>
           <HeaderLink to={"/courses"}>Courses</HeaderLink>
           <HeaderButton>Sign in</HeaderButton>
-          <HeaderButton isSecondary>Register</HeaderButton>
+          <HeaderButton isSecondary onClick={() => navigate("/register")}>
+            Register
+          </HeaderButton>
         </Nav>
       </HeaderInner>
     </HeaderWrapper>

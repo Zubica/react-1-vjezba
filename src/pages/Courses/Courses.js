@@ -5,7 +5,7 @@ import Grid from "../../components/Grid/Grid";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import { courses as data } from "../../utils/data";
-import Button from "../../components/Button/Button";
+import { Button } from "../../utils/styles/generalStyles";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import { SearchBar } from "../../utils/styles/generalStyles";

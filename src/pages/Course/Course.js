@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button/Button";
+import { Button } from "../../utils/styles/generalStyles";
 import Section from "../../components/Section/Section";
 import Header from "../../components/Header/Header";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";

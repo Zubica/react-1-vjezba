@@ -1,7 +1,12 @@
 import styled from "styled-components";
-import { breakpoints, colors } from "./theme";
+import { breakpoints, colors, fonts } from "./theme";
+import {
+  Form as FormFormik,
+  Field as FieldFormik,
+  ErrorMessage as ErrorMessageFormik,
+} from "formik";
 
-export const Button = styled.Button`
+export const Button = styled.button`
   display: inline-block;
   width: 150px;
   line-height: 48px;
@@ -51,4 +56,45 @@ export const SearchBar = styled.input`
   @media screen and (${breakpoints.tablet}) {
     font-size: 16px;
   }
+`;
+
+export const Form = styled(FormFormik)``;
+
+export const FormRow = styled.div`
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+export const Label = styled.label`
+  display: block;
+  margin-bottom: 6px;
+`;
+
+export const Field = styled(FieldFormik)`
+  border: 1px solid ${colors.textSecondary};
+  border-radius: 6px;
+  width: 100%;
+  line-height: 50px;
+  height: 50px;
+  padding: 0 12px;
+  outline: none;
+  font-size: 14px;
+  font-family: ${fonts.primary};
+
+  &:focus {
+    border-color: ${colors.textPrimary};
+  }
+
+  @media screen and (${breakpoints.desktop}) {
+    font-size: 16px;
+  }
+`;
+
+export const ErrorMessage = styled(ErrorMessageFormik)`
+  font-size: 14px;
+  color: ${colors.primary};
+  padding-top: 8px;
 `;

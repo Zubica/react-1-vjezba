@@ -9,8 +9,6 @@ const Section = ({
   children,
   isSecondary = false,
 }) => {
-  console.log(helperText);
-
   return (
     <section className={`Section ${isSecondary ? "Section_secondary" : ""}`}>
       <div className="Section-Inner">

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as HamburgerIcon } from "../../assets/images/icon-hamburger.svg";
-import Button from "../Button/Button";
 import { colors, breakpoints } from "../../utils/styles/theme";
+import { Button } from "../../utils/styles/generalStyles";
 
 export const HeaderWrapper = styled.header`
   position: absolute;
