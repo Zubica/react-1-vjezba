@@ -31,8 +31,8 @@ const Register = () => {
               isAdmin: false,
             }}
             validationSchema={Yup.object({
-              firstName: Yup.string().require("First name is required"),
-              lastName: Yup.string().require("Last name is required"),
+              firstName: Yup.string().required("First name is required"),
+              lastName: Yup.string().required("Last name is required"),
               email: Yup.string().email("Invalid email address").required(),
             })}
             onSubmit={(values, actions) => {
@@ -60,16 +60,16 @@ const Register = () => {
                     type="text"
                     name="firstName"
                     placeholder="First name..."
-                    disable={formik.isSubmitting}
+                    disabled={formik.isSubmitting}
                   />
-                  <ErrorMessage component="div" name="lastName" />
+                  <ErrorMessage component="div" name="firstName" />
                 </FormRow>
                 <FormRow>
                   <Field
                     type="text"
-                    name="firstName"
-                    placeholder="First name..."
-                    disable={formik.isSubmitting}
+                    name="lastName"
+                    placeholder="Last name..."
+                    disabled={formik.isSubmitting}
                   />
                   <ErrorMessage component="div" name="lastName" />
                 </FormRow>
@@ -78,9 +78,15 @@ const Register = () => {
                     type="password"
                     name="passwordRepeat"
                     placeholder="Password repeat..."
-                    disable={formik.isSubmitting}
+                    disabled={formik.isSubmitting}
                   />
-                  <ErrorMessage component="div" name="lastName" />
+                  <ErrorMessage component="div" name="passwordRepeat" />
+                </FormRow>
+                <FormRow>
+                  <Button 
+                  type="submit"
+                  isSecondary
+                  >Register</Button>
                 </FormRow>
               </Form>
             )}

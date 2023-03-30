@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as HamburgerIcon } from "../../assets/images/icon-hamburger.svg";
-<<<<<<< HEAD
-=======
-// import Button from "../Button/Button";
->>>>>>> 500beb51ea8752195dcaa1123add13ba79c106fe
 import { colors, breakpoints } from "../../utils/styles/theme";
 import { Button } from "../../utils/styles/generalStyles";
 
@@ -77,13 +73,13 @@ export const HeaderLink = styled(NavLink)`
   }
 `;
 
-// export const HeaderButton = styled(Button)`
-//   margin-right: 32px;
+export const HeaderButton = styled(Button)`
+  margin-right: 32px;
 
-//   &:last-child {
-//     margin-right: 0;
-//   }
-// `;
+  &:last-child {
+    margin-right: 0;
+  }
+`;
 
 // import styled from "styled-components";
 //  import { NavLink } from "react-router-dom";
