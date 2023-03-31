@@ -75,12 +75,57 @@ const Register = () => {
                 </FormRow>
                 <FormRow>
                   <Field
+                    type="text"
+                    name="Email"
+                    placeholder="Email..."
+                    disabled={formik.isSubmitting}
+                  />
+                  <ErrorMessage component="div" name="Email" />
+                </FormRow>
+                <FormRow>
+                  <Field
+                    type="text"
+                    name="password"
+                    placeholder="Password..."
+                    disabled={formik.isSubmitting}
+                  />
+                  <ErrorMessage component="div" name="password" />
+                </FormRow>
+                <FormRow>
+                  <Field
                     type="password"
                     name="passwordRepeat"
                     placeholder="Password repeat..."
                     disabled={formik.isSubmitting}
                   />
                   <ErrorMessage component="div" name="passwordRepeat" />
+                </FormRow>
+                <FormRow>
+                  <Field
+                    type="text"
+                    name="githubUsername"
+                    placeholder="GitHub username..."
+                    disabled={formik.isSubmitting}
+                  />
+                  <ErrorMessage component="div" name="githubUsername" />
+                </FormRow>
+                <FormRow>
+                  <Field
+                    type="text"
+                    name="zeplinUsername"
+                    placeholder="Zeplin username..."
+                    disabled={formik.isSubmitting}
+                  />
+                  <ErrorMessage component="div" name="zeplinUsername" />
+                </FormRow>
+                <FormRow>
+                  <Field
+                    type="text"
+                    name="activeFacultyYear"
+                    placeholder="Activ faculty year..."
+                    disabled={formik.isSubmitting}
+                  />
+                  <ErrorMessage component="div" name="activeFacultyear" />
                 </FormRow>
                 <FormRow>
                   <Button 

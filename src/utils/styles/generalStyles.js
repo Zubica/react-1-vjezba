@@ -5,6 +5,8 @@ import {
   Form as FormFormik,
   Field as FieldFormik,
   ErrorMessage as ErrorMessageFormik,
+  Profile as ProfileFormik,
+  Label as LabelFormik,
 } from "formik";
 
 export const Button = styled.button`
