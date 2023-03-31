@@ -32,19 +32,20 @@ const Header = ({ isSecondary = false }) => {
         <Hamburger />
         <Nav>
           <HeaderLink to={"/courses"}>Courses</HeaderLink>
-          <HeaderButton>Sign in</HeaderButton>
+          <HeaderLink to={"/profile"}>Profile</HeaderLink>
+          <HeaderButton onClick={() => navigate("/sign-in")}>
+            Sign in
+          </HeaderButton>
           <HeaderButton isSecondary onClick={() => navigate("/register")}>
             Register
           </HeaderButton>
-          <HeaderLink isSecondary onClick={() => navigate("/profile")}>Profile</HeaderLink>
         </Nav>
       </HeaderInner>
     </HeaderWrapper>
   );
 };
 
-
- Header.propTypes = {
-   isSecondary: PropTypes.bool,
- };
- export default Header;
+Header.propTypes = {
+  isSecondary: PropTypes.bool,
+};
+export default Header;
