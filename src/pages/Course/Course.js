@@ -19,11 +19,11 @@ const Course = () => {
       <main>
         <Section
           title={course.title}
-          // actionContainer={
-          //   <Button isOutLine handleClick={() => navigate(-1)}>
-          //     Back
-          //   </Button>
-          // }
+          actionContainer={
+            <Button isOutLine handleClick={() => navigate(-1)}>
+              Back
+            </Button>
+          }
           helperText={course.subtitle}
         >
           <SingleCourse imgSrc={course.img.src} imgAlt={course.img.alt}>
