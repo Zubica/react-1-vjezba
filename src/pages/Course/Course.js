@@ -7,6 +7,7 @@ import CourseImg from "../../assets/images/lecture-3.jpg";
 import { useNavigate, useParams } from "react-router-dom";
 import { courses } from "../../utils/data";
 
+
 const Course = () => {
   const navigate = useNavigate();
   const { id } = useParams();
