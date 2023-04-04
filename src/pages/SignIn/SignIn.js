@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import Header from "../../components/Header/Header";
@@ -13,11 +13,13 @@ import {
   Button,
 } from "../../utils/styles/generalStyles";
 import { loginUser, getAllUsers } from "../../api/users";
+import { AuthContext } from "../../context/AuthContext";
 
 const SignIn = () => {
+  const { setIsLoggedIn } = useContext(AuthContext);
   return (
     <>
-      <Header isSecondary={true} />
+      <Header isSecondary />
       <main>
         <Section title={"Sign In"} isMainSection={true} isTitleCentered={true}>
           <Formik
@@ -40,6 +42,9 @@ const SignIn = () => {
                 const user = users.data.find(
                   (user) => user.email === values.email
                 );
+
+                localStorage.setItem("accessToken", res.access_token);
+                setIsLoggedIn(true);
 
                 console.log(res);
                 console.log(users);

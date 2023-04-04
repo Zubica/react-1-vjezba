@@ -120,7 +120,7 @@ export const Select = styled.select`
 
 export const Option = styled.option``;
 
-export const FormSuccessMessage = styled.props`
+export const FormSuccessMessage = styled.p`
   padding: 12px;
   font-size: 14px;
   color: #27ae60;

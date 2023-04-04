@@ -9,9 +9,18 @@ import {
   HeaderLink,
   HeaderButton,
 } from "./HeaderStyles";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 
 const Header = ({ isSecondary = false }) => {
   const navigate = useNavigate();
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("accessToken");
+  };
+
   return (
     <HeaderWrapper isSecondary={isSecondary}>
       <HeaderInner>
@@ -32,13 +41,25 @@ const Header = ({ isSecondary = false }) => {
         <Hamburger />
         <Nav>
           <HeaderLink to={"/courses"}>Courses</HeaderLink>
-          <HeaderLink to={"/profile"}>Profile</HeaderLink>
-          <HeaderButton onClick={() => navigate("/sign-in")}>
-            Sign in
-          </HeaderButton>
-          <HeaderButton isSecondary onClick={() => navigate("/register")}>
-            Register
-          </HeaderButton>
+
+          {!isLoggedIn &&
+            (<HeaderLink to={"/profile"}>Profile</HeaderLink>)(
+              <HeaderButton onClick={() => navigate("/sign-in")}>
+                Sign in
+              </HeaderButton>
+            )}
+          {!isLoggedIn && (
+            <HeaderButton isSecondary onClick={() => navigate("/register")}>
+              Register
+            </HeaderButton>
+          )}
+          {isLoggedIn && (
+            <>
+              <HeaderButton onClick={handleLogout} isSecondary>
+                Logout
+              </HeaderButton>
+            </>
+          )}
         </Nav>
       </HeaderInner>
     </HeaderWrapper>
