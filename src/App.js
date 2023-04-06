@@ -23,13 +23,13 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/courses" element={<Courses />} />
       <Route path="/course/:id" element={<Course />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/sign-in" element={<SignIn />} />
-      <ProtectedRoute
-        path="/profile"
-        element={<ProtectedRoute isLoggedIn={isLoggedIn}>
-          <Profile/>
-      </ProtectedRoute>
+      <Route element={<ProtectedRoute isLoggedIn={isLoggedIn} redirectPath="/sign-in" />}>
+        <Route path="/profile" element={<Profile />} />
+      </Route>
+      <Route element={<ProtectedRoute isLoggedIn={!isLoggedIn} />}>
+        <Route path="/register" element={<Register />} />
+        <Route path="/sign-in" element={<SignIn />} />
+      </Route>
     </Routes>
   );
 }
