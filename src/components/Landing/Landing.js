@@ -2,11 +2,7 @@ import React from "react";
 import "./Landing.scss";
 import { Button } from "../../utils/styles/generalStyles";
 import LandingImg from "../../assets/images/landing.jpg";
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
-=======
-import { Link } from "react-router-dom";
->>>>>>> 3edd9e4ea54f36219e14ca15d15fb9b18c03dd65
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -27,13 +23,7 @@ const Landing = () => {
             Make a turnaround in your career or upgrade your current skill set
             with knowledge-based lessons from IT practice.
           </p>
-<<<<<<< HEAD
           <Button isLanding onClick={() => navigate("/courses")}>Explore courses</Button>
-=======
-          <Link to="/courses">
-            <Button isLanding>Explore courses</Button>
-          </Link>
->>>>>>> 3edd9e4ea54f36219e14ca15d15fb9b18c03dd65
         </div>
       </div>
     </section>
