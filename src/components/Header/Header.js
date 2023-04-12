@@ -42,12 +42,25 @@ const Header = ({ isSecondary = false }) => {
         <Nav>
           <HeaderLink to={"/courses"}>Courses</HeaderLink>
 
+<<<<<<< HEAD
           {!isLoggedIn &&
           <>
               <HeaderButton onClick={() => navigate("/sign-in")}>
                 Sign in
               </HeaderButton>
               <HeaderButton isSecondary onClick={() => navigate("/register")}>
+=======
+          {!isLoggedIn && (
+            <>
+              <HeaderLink to={"/profile"}>Profile</HeaderLink>
+              <HeaderButton onClick={() => navigate("/sign-in")}>
+                Sign in
+              </HeaderButton>
+            </>
+          )}
+          {!isLoggedIn && (
+            <HeaderButton isSecondary onClick={() => navigate("/register")}>
+>>>>>>> 3edd9e4ea54f36219e14ca15d15fb9b18c03dd65
               Register
             </HeaderButton>
 
