@@ -2,8 +2,11 @@ import React from "react";
 import "./Landing.scss";
 import { Button } from "../../utils/styles/generalStyles";
 import LandingImg from "../../assets/images/landing.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="Landing">
       <figure className="Landing-Figure">
@@ -20,7 +23,7 @@ const Landing = () => {
             Make a turnaround in your career or upgrade your current skill set
             with knowledge-based lessons from IT practice.
           </p>
-          <Button isLanding>Explore courses</Button>
+          <Button isLanding onClick={() => navigate("/courses")}>Explore courses</Button>
         </div>
       </div>
     </section>

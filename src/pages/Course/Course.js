@@ -3,7 +3,6 @@ import { Button } from "../../utils/styles/generalStyles";
 import Section from "../../components/Section/Section";
 import Header from "../../components/Header/Header";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
-import CourseImg from "../../assets/images/lecture-3.jpg";
 import { useNavigate, useParams } from "react-router-dom";
 import { courses } from "../../utils/data";
 
@@ -21,7 +20,7 @@ const Course = () => {
         <Section
           title={course.title}
           actionContainer={
-            <Button isOutLine handleClick={() => navigate(-1)}>
+            <Button isOutline onClick={() => navigate(-1)}>
               Back
             </Button>
           }
